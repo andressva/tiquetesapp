@@ -1,5 +1,11 @@
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .section{
   width: 100%;
+  max-width: 2250px;
   display: flex;
   min-height: 700px;
   display: flex;
@@ -15,9 +21,30 @@
 
 .rightColumn{
   width: 75%;
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
 }
 
 .labelInfo{
   font-size: 36px;
   color: white;
+}
+
+@media (max-width: 1150px) {
+  .section{
+      flex-direction: column;
+      align-items: center;
+  }
+  .leftColumn, .rightColumn{
+    width: 100%;
+  }
+  .leftColumn{
+    height: 100px;
+    padding-top: 0;
+    align-items: center;
+  }
+  .labelInfo{
+    font-size: 28px;
+  }
 }

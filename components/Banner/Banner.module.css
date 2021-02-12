@@ -1,5 +1,12 @@
+.container{
+  width: 100%;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+}
 .banner{
   width: 100%;
+  max-width: 2250px;
   height: 150px;
   display: flex;
   align-items: center;
