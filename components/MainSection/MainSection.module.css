@@ -1,0 +1,23 @@
+.section{
+  width: 100%;
+  display: flex;
+  min-height: 700px;
+  display: flex;
+}
+
+.leftColumn{
+  width: 25%;
+  display: flex;
+  padding-left: 50px;
+  padding-top: 50px;
+  background-color: #ACD038;
+}
+
+.rightColumn{
+  width: 75%;
+}
+
+.labelInfo{
+  font-size: 36px;
+  color: white;
+}
