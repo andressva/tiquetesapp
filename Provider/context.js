@@ -1,17 +1,50 @@
 import { createContext, useContext, useState } from 'react';
+import axios from 'axios';
 
 const AppContext = createContext();
 
 export function AppProvider({ children }) {
   const [ flights, setFlights ] = useState([]);
+  const [ filterFlights, setFilterFlights ] = useState([]);
+  // const [ history, setHistory ] = useState([]);
+  const [ loading, setLoading ] = useState(false)
+  const urlAPI = "https://intranet.tiquetesytiquetes.com/testeos/r_controller.php?itinerarios=";
 
-  const searchFlights = (criteria) => {
-    console.log(criteria)
+  const getFlights = (codigo) => {
+    return flights.filter(f => {
+      return f.codigo_reserva.toLowerCase() === codigo
+    });
+  }
+
+  const getFlightsAPI = async (codigo) => {
+    return new Promise(async resolve => {
+      const resp = await axios.get(`${urlAPI}${codigo}`)
+      resolve(resp.data.respuesta);
+    })
+  }
+
+  const searchFlights = async ({criteria}) => {
+    setLoading(true);
+    setFilterFlights([]);
+    const crt = criteria.toLowerCase();
+    const thereIs = getFlights(crt)
+    if(thereIs.length === 0){
+      const resp = await getFlightsAPI(crt)
+      if(resp !== null){
+        setFilterFlights(resp)
+        setFlights([...flights, ...resp])
+      }
+      setLoading(false);
+    } else {
+      setFilterFlights(thereIs)
+      console.log('Ya estan cargados!')
+    }
   }
 
   return (
     <AppContext.Provider value={{
       flights: flights,
+      filterFlights: filterFlights,
       searchFlights: searchFlights,
     }}>
       {children}

@@ -4,55 +4,55 @@ import { useAppContext } from '../../Provider/context'
 
 export default function FlightsList() {
   const context = useAppContext();
-  const { flights } = context;
-  const aero = 'AV'
+  const { filterFlights, loading } = context;
   return (
     <div className={styles.section}>
-      {flights && flights.map(f => {
-        return <flightItem key={f.numero_vuelo} />
+      {console.log(filterFlights)}
+      {filterFlights && !loading && filterFlights.map(f => {
+        return <FlightItem key={f.numero_vuelo} item={f} />
       })}
     </div>
   )
 }
 
-const flightItem = () => {
+const FlightItem = ({item}) => {
   return (
     <div className={styles.item}> 
         <div className={styles.column}>
           <div className={styles.field}>
-            <p>{sharedState}</p>
+            <p>Aerolinea</p>
             <Image
-              src={`/images/${aero}.png`}
-              alt="Picture of the author"
+              src={`/images/${item.aerolinea_validadora}.png`}
+              alt={item.aerolinea_validadora}
               width={138}
               height={33}
             />
           </div>
           <div className={styles.field}>
             <p>Salida</p>
-            <p>20-09-18</p>
+            <p>{item.FechaSalida}</p>
           </div>
           <div className={styles.field}>
             <p>Hora</p>
-            <p>12:34am</p>
+            <p>{item.HoraSalida}</p>
           </div>
           <div className={styles.field}>
             <p>No. de vuelo</p>
-            <p>8507</p>
+            <p>{item.numero_vuelo}</p>
           </div>
         </div>
         <div className={styles.column}>
           <div className={styles.field}>
               <p>Llegada</p>
-              <p>30-09-23</p>
+              <p>{item.FechaLLegada}</p>
           </div>
           <div className={styles.field}>
             <p>Hora</p>
-            <p>15:34</p>
+            <p>{item.HoraLLegada}</p>
           </div>
           <div className={styles.field}>
             <p>Ruta</p>
-            <p>Bogota - Cali</p>
+            <p>{`${item.origen} - ${item.destino}`}</p>
           </div>
         </div>
       </div>

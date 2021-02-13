@@ -13,7 +13,7 @@ export default function MainSectrion() {
   }
 
   return (
-    <Container>
+    <Container custom={{ flex: '1' }}>
       <div className={styles.section}>
         <div className={styles.leftColumn}>
           <h2 className={styles.labelInfo}>Información<br/>de vuelos</h2>
