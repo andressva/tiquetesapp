@@ -1,7 +1,8 @@
 import styles from './FlightsList.module.css'
+import Image from 'next/image'
 
 export default function FlightsList() {
-
+  const aero = 'AV'
   return (
     <div className={styles.section}>
 
@@ -9,7 +10,12 @@ export default function FlightsList() {
         <div className={styles.column}>
           <div className={styles.field}>
             <p>Aerolinea</p>
-            <p>AVIANCA</p>
+            <Image
+              src={`/images/${aero}.png`}
+              alt="Picture of the author"
+              width={138}
+              height={33}
+            />
           </div>
           <div className={styles.field}>
             <p>Salida</p>
@@ -39,7 +45,7 @@ export default function FlightsList() {
           </div>
         </div>
       </div>
-
+      
     </div>
   )
 }

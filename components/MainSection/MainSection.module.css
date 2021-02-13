@@ -1,10 +1,6 @@
-.container{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
 .section{
   width: 100%;
+  flex: 1;
   max-width: 2250px;
   display: flex;
   min-height: 700px;

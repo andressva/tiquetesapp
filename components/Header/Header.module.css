@@ -1,8 +1,3 @@
-.container{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
 .header{
   width: 100%;
   max-width: 2250px;

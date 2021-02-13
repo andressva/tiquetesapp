@@ -1,0 +1,24 @@
+.footer{
+  width: 100%;
+  height: 50px;
+  max-width: 2250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #F2FFF9;
+}
+
+.footerMade, .footerEmail, .separator{
+  font-size: 12px;
+  font-weight: bold;
+  color: #747474;
+}
+
+.footerEmail{
+  color: #40AFFF;
+}
+
+.separator{
+  padding: 0 5px;
+}

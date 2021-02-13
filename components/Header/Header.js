@@ -1,9 +1,11 @@
 import styles from './Header.module.css'
 import Image from 'next/image'
 
+import Container from '../Container/Container'
+
 export default function Header() {
   return (
-    <div className={styles.container}>
+    <Container>
     <div className={styles.header}>
       <Image
         src="/images/logo.svg"
@@ -12,6 +14,6 @@ export default function Header() {
         height={50}
       />
     </div>
-    </div>
+    </Container>
   )
 }
