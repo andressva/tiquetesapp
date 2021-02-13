@@ -8,10 +8,6 @@ import Container from '../Container/Container'
 export default function MainSectrion() {
   const { register, handleSubmit, errors } = useForm();
 
-  const onSubmit = data => {
-    console.log(data)
-  }
-
   return (
     <Container custom={{ flex: '1' }}>
       <div className={styles.section}>

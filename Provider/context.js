@@ -23,9 +23,8 @@ export function AppProvider({ children }) {
     })
   }
 
-  const searchFlights = async ({criteria}) => {
+  const searchFlights = async (criteria) => {
     setLoading(true);
-    setFilterFlights([]);
     const crt = criteria.toLowerCase();
     const thereIs = getFlights(crt)
     if(thereIs.length === 0){
@@ -33,11 +32,12 @@ export function AppProvider({ children }) {
       if(resp !== null){
         setFilterFlights(resp)
         setFlights([...flights, ...resp])
+      } else {
+        setFilterFlights([{ error: true }])
       }
       setLoading(false);
     } else {
       setFilterFlights(thereIs)
-      console.log('Ya estan cargados!')
     }
   }
 

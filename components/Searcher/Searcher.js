@@ -10,7 +10,7 @@ export default function Searcher() {
   const { register, handleSubmit, errors } = useForm();
 
   const onSubmit = data => {
-    searchFlights(data);
+    searchFlights(data.criteria.trim());
   }
 
   return (

@@ -7,9 +7,12 @@ export default function FlightsList() {
   const { filterFlights, loading } = context;
   return (
     <div className={styles.section}>
-      {console.log(filterFlights)}
       {filterFlights && !loading && filterFlights.map(f => {
-        return <FlightItem key={f.numero_vuelo} item={f} />
+        if( f.error ){
+          return <h3 key="error">No existen vuelos con el<br/> ingresado!</h3>
+        } else {
+          return <FlightItem key={f.numero_vuelo} item={f} />
+        }
       })}
     </div>
   )
