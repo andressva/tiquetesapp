@@ -4,6 +4,11 @@
   flex-direction: column;
 }
 
+.wrap{
+  display: flex;
+  align-items: flex-end;
+}
+
 .label{
   font-size: 14px;
   font-weight: bold;
@@ -22,7 +27,7 @@
   border: 1px solid #747474;
 }
 
-.btn{
+.btn, .btnAll{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,6 +38,12 @@
   background-color: #ACD038;
   color: white;
   margin-left: 5px;
+}
+
+.btnAll{
+  width: 60px;
+  background-color: #263946;
+  color: white;
 }
 
 .error{
