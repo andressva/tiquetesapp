@@ -1,15 +1,26 @@
 import styles from './FlightsList.module.css'
 import Image from 'next/image'
+import { useAppContext } from '../../Provider/context'
 
 export default function FlightsList() {
+  const context = useAppContext();
+  const { flights } = context;
   const aero = 'AV'
   return (
     <div className={styles.section}>
+      {flights && flights.map(f => {
+        return <flightItem key={f.numero_vuelo} />
+      })}
+    </div>
+  )
+}
 
-      <div className={styles.item}>
+const flightItem = () => {
+  return (
+    <div className={styles.item}> 
         <div className={styles.column}>
           <div className={styles.field}>
-            <p>Aerolinea</p>
+            <p>{sharedState}</p>
             <Image
               src={`/images/${aero}.png`}
               alt="Picture of the author"
@@ -45,7 +56,7 @@ export default function FlightsList() {
           </div>
         </div>
       </div>
-      
-    </div>
   )
 }
+
+
