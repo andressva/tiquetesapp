@@ -2,11 +2,14 @@ import styles from './FlightsList.module.css'
 import Image from 'next/image'
 import { useAppContext } from '../../Provider/context'
 
+import Spinner from '../Spinner/Spinner'
+
 export default function FlightsList() {
   const context = useAppContext();
   const { filterFlights, loading } = context;
   return (
     <div className={styles.section}>
+      <Spinner show={loading} />
       {filterFlights && !loading && filterFlights.map(f => {
         if( f.error ){
           return <h3 key="error">No existen vuelos con el<br/> ingresado!</h3>

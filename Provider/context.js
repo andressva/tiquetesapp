@@ -38,12 +38,14 @@ export function AppProvider({ children }) {
       setLoading(false);
     } else {
       setFilterFlights(thereIs)
+      setLoading(false);
     }
   }
 
   return (
     <AppContext.Provider value={{
       flights: flights,
+      loading: loading,
       filterFlights: filterFlights,
       searchFlights: searchFlights,
     }}>
