@@ -3,9 +3,11 @@ import Container from '../Container/Container'
 
 export default function Banner() {
   return (
-    <Container bgColor="#F2FFF9">
+    <Container>
       <div className={styles.banner}>
+        <div className={styles.render}>
         <h2 className={styles.slogan}>Encuentra tus vuelos<br/>fácilmente!</h2>
+        </div>
       </div>
     </Container>
   )

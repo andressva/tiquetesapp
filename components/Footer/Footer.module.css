@@ -15,9 +15,11 @@
   color: #ffff;
 }
 
-.footerEmail{
+.footerMade a{
   color: #40AFFF;
+  text-decoration: underline;
 }
+
 
 .separator{
   padding: 0 5px;
