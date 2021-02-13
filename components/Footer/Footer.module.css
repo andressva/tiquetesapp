@@ -6,13 +6,13 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background-color: #F2FFF9;
+  background-color: #263946;
 }
 
 .footerMade, .footerEmail, .separator{
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
-  color: #747474;
+  color: #ffff;
 }
 
 .footerEmail{
