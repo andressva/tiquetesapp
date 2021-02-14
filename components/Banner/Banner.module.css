@@ -30,3 +30,15 @@
       background-position-x:center;
   }
 }
+
+@media (max-width: 650px) {
+  .banner{
+    background-size: 250%;
+  }
+  .render{
+    padding-left: 20px;
+  }
+  .slogan{
+    font-size: 36px;
+  }
+}

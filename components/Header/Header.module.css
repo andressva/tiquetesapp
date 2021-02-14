@@ -1,9 +1,15 @@
 .header{
   width: 100%;
   max-width: 2550px;
-  height: 80px;
+  height: 60px;
   display: flex;
   align-items: center;
   padding-left: 50px;
-  
 }
+
+@media (max-width: 650px) {
+  .header{
+    padding-left: 20px;
+  }
+}
+

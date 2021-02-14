@@ -29,3 +29,23 @@
   width: 50%;
   text-align: left;
 }
+
+@media (max-width: 850px) {
+  .section{
+    width: 100%;
+    align-items: center;
+  }
+  .item{
+    width: 80%;
+    flex-direction: column;
+  }
+  .column{
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .item{
+    width: 100%;
+  }
+}

@@ -10,7 +10,7 @@ export default function Header() {
       <Image
         src="/images/logo.svg"
         alt="tiquetes.com"
-        width={200}
+        width={160}
         height={50}
       />
     </div>
