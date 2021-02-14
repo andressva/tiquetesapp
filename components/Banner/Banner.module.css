@@ -30,7 +30,8 @@
 @media (max-width: 1150px) {
   .banner{
     background-image: url('/images/bg-banner-mb.jpg');
-    /* background-position-x:center; */
+    /* background-size: 200%; */
+    background-position-x:center;
   }
 }
 
@@ -40,5 +41,12 @@
   }
   .slogan{
     font-size: 32px;
+  }
+}
+
+@media (max-width: 850px) {
+  .render{
+    align-items: flex-start;
+    padding-top: 20%;
   }
 }
