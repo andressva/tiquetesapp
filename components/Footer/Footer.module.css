@@ -7,10 +7,10 @@
   align-items: center;
   padding: 5px;
   background-color: #263946;
+  font-size: 14px;
 }
 
 .footerMade, .footerEmail, .separator{
-  font-size: 14px;
   font-weight: bold;
   color: #ffff;
 }
@@ -20,7 +20,18 @@
   text-decoration: underline;
 }
 
-
 .separator{
   padding: 0 5px;
+}
+
+@media (max-width: 850px) {
+  .footer{
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 650px) {
+  .footer{
+    font-size: 10px;
+  }
 }

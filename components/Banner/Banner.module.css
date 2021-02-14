@@ -36,9 +36,9 @@
     background-size: 250%;
   }
   .render{
-    padding-left: 20px;
+    padding: 0px 20px;
   }
   .slogan{
-    font-size: 36px;
+    font-size: 32px;
   }
 }
