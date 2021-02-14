@@ -8,9 +8,17 @@
 .leftColumn{
   width: 25%;
   display: flex;
-  padding-left: 50px;
+  flex-direction: column;
   padding-top: 50px;
   background-color: #ACD038;
+}
+.bgContainer{
+  flex: 1;
+  width: 100%;
+  background-color: #ACD038;
+  background-image: url('/images/map.svg');
+  background-repeat: no-repeat;
+  background-position-y: center;
 }
 
 .rightColumn{
@@ -21,6 +29,8 @@
 }
 
 .labelInfo{
+  padding-left: 50px;
+  padding-bottom: 15px;
   font-size: 36px;
   color: white;
 }
@@ -36,6 +46,7 @@
   .leftColumn{
     height: 100px;
     padding-top: 0;
+    flex-direction: row;
     align-items: center;
   }
   .rightColumn{
@@ -43,6 +54,11 @@
   }
   .labelInfo{
     font-size: 28px;
+    padding-bottom: 0px;
+  }
+  .bgContainer{
+    height: 100%;
+    background-size: 100%;
   }
 }
 
@@ -52,8 +68,8 @@
   }
 }
 
-@media (max-width: 650px) {
-  .leftColumn{
+@media (max-width: 850px) {
+  .labelInfo{
     padding-left: 20px;
   }
   .labelInfo{

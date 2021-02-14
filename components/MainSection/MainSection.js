@@ -13,6 +13,7 @@ export default function MainSectrion() {
       <div className={styles.section}>
         <div className={styles.leftColumn}>
           <h2 className={styles.labelInfo}>Información<br/>de vuelos</h2>
+          <div className={styles.bgContainer}></div>
         </div>
         <div className={styles.rightColumn}>
           <Searcher/>

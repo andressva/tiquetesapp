@@ -24,10 +24,14 @@
   padding: 8px;
   width: 250px;
   border-radius: 5px;
-  border: 1px solid #747474;
+  border: 1px solid #cecece;
+}
+.input:focus{
+  border-color: #a71b1b;
+  box-shadow: none;
 }
 
-.btn, .btnAll{
+.btn{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,15 +39,10 @@
   height: 32px;
   border: none;
   border-radius: 5px;
-  background-color: #ACD038;
-  color: white;
-  margin-left: 5px;
-}
-
-.btnAll{
-  width: 60px;
   background-color: #263946;
   color: white;
+  margin-left: 5px;
+  cursor: pointer;
 }
 
 .error{

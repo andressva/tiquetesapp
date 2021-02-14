@@ -42,6 +42,11 @@
   .column{
     width: 100%;
   }
+
+  .error{
+   width: 100%;
+   text-align: left;
+  }
 }
 
 @media (max-width: 450px) {

@@ -12,7 +12,7 @@ export default function FlightsList() {
       <Spinner show={loading} />
       {filterFlights && !loading && filterFlights.map(f => {
         if( f.error ){
-          return <h3 key="error">No existen vuelos con el<br/> ingresado!</h3>
+          return <h3 className={styles.error} key="error">No existen vuelos con el<br/>codigo ingresado!</h3>
         } else {
           return <FlightItem key={f.numero_vuelo} item={f} />
         }
